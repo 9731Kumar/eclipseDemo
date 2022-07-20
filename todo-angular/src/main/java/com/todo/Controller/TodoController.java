@@ -20,6 +20,7 @@ public class TodoController {
 	
 	@GetMapping("/login/{username}/{password}/{role}")
 	public boolean checkLogin(@PathVariable String username,@PathVariable String password,@PathVariable String role ) {
+		System.out.println("Changed");
 		return todoServices.checkLoginCredentials(username, password, role);
 	}
 	
